@@ -170,12 +170,12 @@ const LiveJourney = memo(function LiveJourney({distance, from, to, setLiveJourne
 
     let interval
     useEffect(() => {
-        let distanceTravalled = 0
+        let distanceTravelled = 0
          interval = setInterval(() => {
             setCurrentTime((currentTime) => currentTime + 1)
-             distanceTravalled = Math.round((distanceTravalled + 0.2) * 100) / 100
+             distanceTravelled = Math.round((distanceTravelled + 0.2) * 100) / 100
             setTravelled(curr => Math.round((curr + 0.2) * 100) / 100)
-             if (distance === distanceTravalled) {
+             if (distance === distanceTravelled) {
                  setJourneyComplete(true)
              }
         }, 1000)
